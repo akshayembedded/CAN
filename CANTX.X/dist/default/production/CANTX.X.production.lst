@@ -1,0 +1,473 @@
+
+
+Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
+                                                                                               Sat Nov 18 20:09:31 2023
+
+Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1 
+     1                           	processor	18F4580
+     2                           	fnconf	rparam,??,?,0
+     3                           	pagewidth 120
+     4                           	opt	flic
+     5                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     7                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     8                           	psect	smallconst,global,reloc=2,class=SMALLCONST,delta=1,noexec
+     9                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    10                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    11   000000                     
+    12                           ; Generated 23/03/2023 GMT
+    13                           ; 
+    14                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    15                           ; All rights reserved.
+    16                           ; 
+    17                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    18                           ; 
+    19                           ; Redistribution and use in source and binary forms, with or without modification, are
+    20                           ; permitted provided that the following conditions are met:
+    21                           ; 
+    22                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    23                           ;        conditions and the following disclaimer.
+    24                           ; 
+    25                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    26                           ;        of conditions and the following disclaimer in the documentation and/or other
+    27                           ;        materials provided with the distribution. Publication is not required when
+    28                           ;        this file is used in an embedded application.
+    29                           ; 
+    30                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    31                           ;        software without specific prior written permission.
+    32                           ; 
+    33                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    34                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    35                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    36                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    37                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    38                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    39                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    40                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    41                           ; 
+    42                           ; 
+    43                           ; Code-generator required, PIC18F4580 Definitions
+    44                           ; 
+    45                           ; SFR Addresses
+    46   000000                     _MDSEL0	set	31678
+    47   000000                     _RXB0CON	set	3936
+    48   000000                     _CANSTATbits	set	3950
+    49   000000                     _CANCONbits	set	3951
+    50   000000                     _TRISB	set	3987
+    51   000000                     _RCSTA	set	4011
+    52   000000                     _TXSTA	set	4012
+    53   000000                     _LATB3	set	31827
+    54   000000                     _TXREG	set	4013
+    55   000000                     _SPBRG	set	4015
+    56   000000                     _TRISC	set	3988
+    57   000000                     _TXIF	set	31988
+    58   000000                     _BRGCON3	set	3954
+    59   000000                     _BRGCON2	set	3953
+    60   000000                     _BRGCON1	set	3952
+    61   000000                     _ENDRHI	set	31645
+    62   000000                     _MDSEL1	set	31679
+    63   000000                     _RXB0D0	set	3942
+    64   000000                     _RXB0D1	set	3943
+    65                           
+    66                           ; #config settings
+    67                           
+    68                           	psect	cinit
+    69   007E32                     __pcinit:
+    70                           	callstack 0
+    71   007E32                     start_initialization:
+    72                           	callstack 0
+    73   007E32                     __initialization:
+    74                           	callstack 0
+    75   007E32                     end_of_initialization:
+    76                           	callstack 0
+    77   007E32                     __end_of__initialization:
+    78                           	callstack 0
+    79   007E32  0100               	movlb	0
+    80   007E34  EF1C  F03F         	goto	_main	;jump to C main() function
+    81                           
+    82                           	psect	cstackCOMRAM
+    83   000000                     __pcstackCOMRAM:
+    84                           	callstack 0
+    85   000000                     
+    86                           ; 1 bytes @ 0x0
+    87 ;;
+    88 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+    89 ;;
+    90 ;; *************** function _main *****************
+    91 ;; Defined at:
+    92 ;;		line 9 in file "CANTX.c"
+    93 ;; Parameters:    Size  Location     Type
+    94 ;;		None
+    95 ;; Auto vars:     Size  Location     Type
+    96 ;;  a               1    0        unsigned char 
+    97 ;; Return value:  Size  Location     Type
+    98 ;;                  1    wreg      void 
+    99 ;; Registers used:
+   100 ;;		wreg, status,2
+   101 ;; Tracked objects:
+   102 ;;		On entry : 0/0
+   103 ;;		On exit  : 0/0
+   104 ;;		Unchanged: 0/0
+   105 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+   106 ;;      Params:         0       0       0       0       0       0       0
+   107 ;;      Locals:         0       0       0       0       0       0       0
+   108 ;;      Temps:          0       0       0       0       0       0       0
+   109 ;;      Totals:         0       0       0       0       0       0       0
+   110 ;;Total ram usage:        0 bytes
+   111 ;; This function calls:
+   112 ;;		Nothing
+   113 ;; This function is called by:
+   114 ;;		Startup code after reset
+   115 ;; This function uses a non-reentrant model
+   116 ;;
+   117                           
+   118                           	psect	text0
+   119   007E38                     __ptext0:
+   120                           	callstack 0
+   121   007E38                     _main:
+   122                           	callstack 31
+   123   007E38                     
+   124                           ;CANTX.c: 12: char a;;CANTX.c: 13: TXSTA=0x24;
+   125   007E38  0E24               	movlw	36
+   126   007E3A  6EAC               	movwf	172,c	;volatile
+   127                           
+   128                           ;CANTX.c: 14: RCSTA=0x90;
+   129   007E3C  0E90               	movlw	144
+   130   007E3E  6EAB               	movwf	171,c	;volatile
+   131                           
+   132                           ;CANTX.c: 15: SPBRG=129;
+   133   007E40  0E81               	movlw	129
+   134   007E42  6EAF               	movwf	175,c	;volatile
+   135                           
+   136                           ;CANTX.c: 16: TRISB=0x08;
+   137   007E44  0E08               	movlw	8
+   138   007E46  6E93               	movwf	147,c	;volatile
+   139                           
+   140                           ;CANTX.c: 17: TRISC=0x80;
+   141   007E48  0E80               	movlw	128
+   142   007E4A  6E94               	movwf	148,c	;volatile
+   143   007E4C                     
+   144                           ;CANTX.c: 18: LATB3=0;
+   145   007E4C  968A               	bcf	3978,3,c	;volatile
+   146   007E4E                     l51:
+   147   007E4E  A89E               	btfss	3998,4,c	;volatile
+   148   007E50  EF2C  F03F         	goto	u31
+   149   007E54  EF2E  F03F         	goto	u30
+   150   007E58                     u31:
+   151   007E58  EF27  F03F         	goto	l51
+   152   007E5C                     u30:
+   153   007E5C                     
+   154                           ;CANTX.c: 20: TXREG='R';
+   155   007E5C  0E52               	movlw	82
+   156   007E5E  6EAD               	movwf	173,c	;volatile
+   157   007E60                     
+   158                           ;CANTX.c: 21: TXIF=0;
+   159   007E60  989E               	bcf	3998,4,c	;volatile
+   160   007E62                     
+   161                           ;CANTX.c: 22: CANCONbits.REQOP2=1;
+   162   007E62  8E6F               	bsf	111,7,c	;volatile
+   163   007E64                     l54:
+   164   007E64  AE6E               	btfss	110,7,c	;volatile
+   165   007E66  EF37  F03F         	goto	u41
+   166   007E6A  EF39  F03F         	goto	u40
+   167   007E6E                     u41:
+   168   007E6E  EF32  F03F         	goto	l54
+   169   007E72                     u40:
+   170   007E72                     
+   171                           ;CANTX.c: 24: CANCONbits.ABAT=1;
+   172   007E72  886F               	bsf	111,4,c	;volatile
+   173                           
+   174                           ;CANTX.c: 25: MDSEL1=0;
+   175   007E74  9E77               	bcf	3959,7,c	;volatile
+   176                           
+   177                           ;CANTX.c: 26: MDSEL0=0;
+   178   007E76  9C77               	bcf	3959,6,c	;volatile
+   179   007E78                     
+   180                           ;CANTX.c: 27: BRGCON1=0x04;
+   181   007E78  0E04               	movlw	4
+   182   007E7A  6E70               	movwf	112,c	;volatile
+   183                           
+   184                           ;CANTX.c: 29: BRGCON2=0xa4;
+   185   007E7C  0EA4               	movlw	164
+   186   007E7E  6E71               	movwf	113,c	;volatile
+   187                           
+   188                           ;CANTX.c: 30: BRGCON3=0x04;
+   189   007E80  0E04               	movlw	4
+   190   007E82  6E72               	movwf	114,c	;volatile
+   191   007E84                     
+   192                           ;CANTX.c: 31: ENDRHI=1;
+   193   007E84  8A73               	bsf	3955,5,c	;volatile
+   194   007E86                     
+   195                           ;CANTX.c: 32: CANCONbits.REQOP2=0;
+   196   007E86  9E6F               	bcf	111,7,c	;volatile
+   197   007E88                     l57:
+   198   007E88  BE6E               	btfsc	110,7,c	;volatile
+   199   007E8A  EF49  F03F         	goto	u51
+   200   007E8E  EF4B  F03F         	goto	u50
+   201   007E92                     u51:
+   202   007E92  EF44  F03F         	goto	l57
+   203   007E96                     u50:
+   204   007E96                     l786:
+   205                           
+   206                           ;CANTX.c: 38: {;CANTX.c: 39: RXB0CON=0x60;
+   207   007E96  0E60               	movlw	96
+   208   007E98  6E60               	movwf	96,c	;volatile
+   209   007E9A                     l61:
+   210   007E9A  AE60               	btfss	96,7,c	;volatile
+   211   007E9C  EF52  F03F         	goto	u61
+   212   007EA0  EF54  F03F         	goto	u60
+   213   007EA4                     u61:
+   214   007EA4  EF4D  F03F         	goto	l61
+   215   007EA8                     u60:
+   216   007EA8                     
+   217                           ;CANTX.c: 41: TXIF=0;
+   218   007EA8  989E               	bcf	3998,4,c	;volatile
+   219   007EAA                     l64:
+   220   007EAA  A89E               	btfss	3998,4,c	;volatile
+   221   007EAC  EF5A  F03F         	goto	u71
+   222   007EB0  EF5C  F03F         	goto	u70
+   223   007EB4                     u71:
+   224   007EB4  EF55  F03F         	goto	l64
+   225   007EB8                     u70:
+   226   007EB8                     
+   227                           ;CANTX.c: 43: TXREG=RXB0D0;
+   228   007EB8  CF66 FFAD          	movff	3942,4013	;volatile
+   229                           
+   230                           ;CANTX.c: 44: TXIF=0;
+   231   007EBC  989E               	bcf	3998,4,c	;volatile
+   232   007EBE                     l67:
+   233   007EBE  A89E               	btfss	3998,4,c	;volatile
+   234   007EC0  EF64  F03F         	goto	u81
+   235   007EC4  EF66  F03F         	goto	u80
+   236   007EC8                     u81:
+   237   007EC8  EF5F  F03F         	goto	l67
+   238   007ECC                     u80:
+   239   007ECC                     
+   240                           ;CANTX.c: 46: TXREG=RXB0D1;
+   241   007ECC  CF67 FFAD          	movff	3943,4013	;volatile
+   242                           
+   243                           ;CANTX.c: 48: TXIF=0;
+   244   007ED0  989E               	bcf	3998,4,c	;volatile
+   245   007ED2                     l70:
+   246   007ED2  A89E               	btfss	3998,4,c	;volatile
+   247   007ED4  EF6E  F03F         	goto	u91
+   248   007ED8  EF70  F03F         	goto	u90
+   249   007EDC                     u91:
+   250   007EDC  EF69  F03F         	goto	l70
+   251   007EE0                     u90:
+   252   007EE0                     
+   253                           ;CANTX.c: 50: TXREG='\n';
+   254   007EE0  0E0A               	movlw	10
+   255   007EE2  6EAD               	movwf	173,c	;volatile
+   256   007EE4                     
+   257                           ;CANTX.c: 52: TXIF=0;
+   258   007EE4  989E               	bcf	3998,4,c	;volatile
+   259   007EE6                     l73:
+   260   007EE6  A89E               	btfss	3998,4,c	;volatile
+   261   007EE8  EF78  F03F         	goto	u101
+   262   007EEC  EF7A  F03F         	goto	u100
+   263   007EF0                     u101:
+   264   007EF0  EF73  F03F         	goto	l73
+   265   007EF4                     u100:
+   266   007EF4                     
+   267                           ;CANTX.c: 54: TXREG='\r';
+   268   007EF4  0E0D               	movlw	13
+   269   007EF6  6EAD               	movwf	173,c	;volatile
+   270   007EF8  EF4B  F03F         	goto	l786
+   271   007EFC  EF00  F000         	goto	start
+   272   007F00                     __end_of_main:
+   273                           	callstack 0
+   274                           
+   275                           	psect	smallconst
+   276   001400                     __psmallconst:
+   277                           	callstack 0
+   278   001400  00                 	db	0
+   279   001401  00                 	db	0	; dummy byte at the end
+   280   000000                     
+   281                           	psect	rparam
+   282   000000                     tosu	equ	0xFFF
+   283                           tosh	equ	0xFFE
+   284                           tosl	equ	0xFFD
+   285                           stkptr	equ	0xFFC
+   286                           pclatu	equ	0xFFB
+   287                           pclath	equ	0xFFA
+   288                           pcl	equ	0xFF9
+   289                           tblptru	equ	0xFF8
+   290                           tblptrh	equ	0xFF7
+   291                           tblptrl	equ	0xFF6
+   292                           tablat	equ	0xFF5
+   293                           prodh	equ	0xFF4
+   294                           prodl	equ	0xFF3
+   295                           indf0	equ	0xFEF
+   296                           postinc0	equ	0xFEE
+   297                           postdec0	equ	0xFED
+   298                           preinc0	equ	0xFEC
+   299                           plusw0	equ	0xFEB
+   300                           fsr0h	equ	0xFEA
+   301                           fsr0l	equ	0xFE9
+   302                           wreg	equ	0xFE8
+   303                           indf1	equ	0xFE7
+   304                           postinc1	equ	0xFE6
+   305                           postdec1	equ	0xFE5
+   306                           preinc1	equ	0xFE4
+   307                           plusw1	equ	0xFE3
+   308                           fsr1h	equ	0xFE2
+   309                           fsr1l	equ	0xFE1
+   310                           bsr	equ	0xFE0
+   311                           indf2	equ	0xFDF
+   312                           postinc2	equ	0xFDE
+   313                           postdec2	equ	0xFDD
+   314                           preinc2	equ	0xFDC
+   315                           plusw2	equ	0xFDB
+   316                           fsr2h	equ	0xFDA
+   317                           fsr2l	equ	0xFD9
+   318                           status	equ	0xFD8
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      0       0
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 1     1      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 0
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      0       0       1        0.0%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBIGSFRhh         50      0       0      16        0.0%
+BITBIGSFRhl          1      0       0      17        0.0%
+BITBIGSFRlhh         C      0       0      18        0.0%
+BITBIGSFRlhl         9      0       0      19        0.0%
+BITBIGSFRllh         8      0       0      20        0.0%
+BITBIGSFRlllhh      12      0       0      21        0.0%
+BITBIGSFRlllhl       3      0       0      22        0.0%
+BITBIGSFRllllhh      6      0       0      23        0.0%
+BITBIGSFRllllhl      5      0       0      24        0.0%
+BITBIGSFRlllll     260      0       0      25        0.0%
+ABS                  0      0       0      26        0.0%
+BIGRAM             5FF      0       0      27        0.0%
+BIGSFR               0      0       0     200        0.0%
+BITSFR_3             0      0       0     200        0.0%
+SFR_3                0      0       0     200        0.0%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
+Symbol Table                                                                                   Sat Nov 18 20:09:31 2023
+
+                     l51 7E4E                       l61 7E9A                       l70 7ED2  
+                     l54 7E64                       l63 7EA8                       l64 7EAA  
+                     l56 7E72                       l73 7EE6                       l57 7E88  
+                     l66 7EB8                       l67 7EBE                       l69 7ECC  
+                     u30 7E5C                       u31 7E58                       u40 7E72  
+                     u41 7E6E                       u50 7E96                       u51 7E92  
+                     u60 7EA8                       u61 7EA4                       u70 7EB8  
+                     u71 7EB4                       u80 7ECC                       u81 7EC8  
+                     u90 7EE0                       u91 7EDC                      l770 7E38  
+                    l780 7E78                      l772 7E4C                      l790 7EE4  
+                    l782 7E84                      l774 7E5C                      l792 7EF4  
+                    l784 7E86                      l776 7E60                      l786 7E96  
+                    l778 7E62                      l788 7EE0                      u100 7EF4  
+                    u101 7EF0                     _TXIF 7CF4                     _main 7E38  
+                   start 0000             ___param_bank 0000                    ?_main 0000  
+                  _LATB3 7C53                    _RCSTA 0FAB                    _SPBRG 0FAF  
+                  _TRISB 0F93                    _TRISC 0F94                    _TXREG 0FAD  
+                  _TXSTA 0FAC          __initialization 7E32             __end_of_main 7F00  
+                 ??_main 0000            __activetblptr 0000                   _ENDRHI 7B9D  
+                 _MDSEL0 7BBE                   _MDSEL1 7BBF                   _RXB0D0 0F66  
+                 _RXB0D1 0F67                   isa$std 0001             __mediumconst 0000  
+             __accesstop 0060  __end_of__initialization 7E32            ___rparam_used 0001  
+         __pcstackCOMRAM 0000                  _BRGCON1 0F70                  _BRGCON2 0F71  
+                _BRGCON3 0F72                  _RXB0CON 0F60                  __Hparam 0000  
+                __Lparam 0000             __psmallconst 1400                  __pcinit 7E32  
+                __ramtop 0600                  __ptext0 7E38     end_of_initialization 7E32  
+    start_initialization 7E32              _CANSTATbits 0F6E              __smallconst 1400  
+             _CANCONbits 0F6F                 __Hrparam 0000                 __Lrparam 0000  
+               isa$xinst 0000  
