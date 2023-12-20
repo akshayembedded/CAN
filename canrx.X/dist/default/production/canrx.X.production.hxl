@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\aksha\AppData\Local\Temp\xcAsbmo.\driver_tmp_3.o
+ C:\Users\aksha\AppData\Local\Temp\xcAspi8.\driver_tmp_3.o
  -Odist/default/production\canrx.X.production.hex
  -logfile=dist/default/production\canrx.X.production.hxl
  -addressing=1
@@ -9,17 +9,17 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\aksha\AppData\Local\Temp\xcAsbmo.\driver_tmp_3.o)
-  1400h - 1401h		(C:\Users\aksha\AppData\Local\Temp\xcAsbmo.\driver_tmp_3.o)
-  7DBCh - 7EFFh		(C:\Users\aksha\AppData\Local\Temp\xcAsbmo.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\aksha\AppData\Local\Temp\xcAspi8.\driver_tmp_3.o)
+  1400h - 1401h		(C:\Users\aksha\AppData\Local\Temp\xcAspi8.\driver_tmp_3.o)
+  7DC6h - 7EFFh		(C:\Users\aksha\AppData\Local\Temp\xcAspi8.\driver_tmp_3.o)
  Unused ranges:
   4h - 13FFh
-  1402h - 7DBBh
+  1402h - 7DC5h
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\aksha\AppData\Local\Temp\xcAsbmo.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\aksha\AppData\Local\Temp\xcAspi8.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -27,8 +27,7 @@
 ----------------------------------------------------------
 00001400 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-00007DB0 | -- -- -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1
-00007DC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00007DC0 | -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007DD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007DE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007DF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

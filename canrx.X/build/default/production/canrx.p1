@@ -17,9 +17,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21469
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4580.h: 21469: extern volatile unsigned char TXB0D0 __attribute__((address(0xF46)));
 [v _TXB0D0 `Vuc ~T0 @X0 0 e@3910 ]
-"21531
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4580.h: 21531: extern volatile unsigned char TXB0D1 __attribute__((address(0xF47)));
-[v _TXB0D1 `Vuc ~T0 @X0 0 e@3911 ]
 "20861
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4580.h: 20861: extern volatile unsigned char TXB0CON __attribute__((address(0xF40)));
 [v _TXB0CON `Vuc ~T0 @X0 0 e@3904 ]
@@ -1419,16 +1416,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 1096 ]
 }
 "16
-[; ;canrx.c: 16: void cantx(char a,char b)
-[v _cantx `(v ~T0 @X0 1 ef2`uc`uc ]
+[; ;canrx.c: 16: void cantx(char a)
+[v _cantx `(v ~T0 @X0 1 ef1`uc ]
 "17
 [; ;canrx.c: 17: {
 {
 [e :U _cantx ]
 "16
-[; ;canrx.c: 16: void cantx(char a,char b)
+[; ;canrx.c: 16: void cantx(char a)
 [v _a `uc ~T0 @X0 1 r1 ]
-[v _b `uc ~T0 @X0 1 r2 ]
 "17
 [; ;canrx.c: 17: {
 [f ]
@@ -1445,147 +1441,141 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;canrx.c: 22: TXB0D0=a;
 [e = _TXB0D0 -> _a `uc ]
 "23
-[; ;canrx.c: 23: TXB0D1=b;
-[e = _TXB0D1 -> _b `uc ]
-"24
-[; ;canrx.c: 24: TXB0CON=0x08;
+[; ;canrx.c: 23: TXB0CON=0x08;
 [e = _TXB0CON -> -> 8 `i `uc ]
-"25
-[; ;canrx.c: 25: txd('r');
+"24
+[; ;canrx.c: 24: txd('r');
 [e ( _txd (1 -> -> 114 `ui `uc ]
-"26
-[; ;canrx.c: 26: txd(' ');
+"25
+[; ;canrx.c: 25: txd(' ');
 [e ( _txd (1 -> -> 32 `ui `uc ]
-"27
-[; ;canrx.c: 27: while((TXB0CON&0x08)==0x08);
+"26
+[; ;canrx.c: 26: while((TXB0CON&0x08)==0x08);
 [e $U 1101  ]
 [e :U 1102 ]
 [e :U 1101 ]
 [e $ == & -> _TXB0CON `i -> 8 `i -> 8 `i 1102  ]
 [e :U 1103 ]
-"28
-[; ;canrx.c: 28: txd('n');
+"27
+[; ;canrx.c: 27: txd('n');
 [e ( _txd (1 -> -> 110 `ui `uc ]
-"29
-[; ;canrx.c: 29: txd(' ');
+"28
+[; ;canrx.c: 28: txd(' ');
 [e ( _txd (1 -> -> 32 `ui `uc ]
-"30
-[; ;canrx.c: 30: }
+"29
+[; ;canrx.c: 29: }
 [e :UE 1100 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"32
-[; ;canrx.c: 32: void main()
+"31
+[; ;canrx.c: 31: void main()
 [v _main `(v ~T0 @X0 1 ef ]
-"33
-[; ;canrx.c: 33: {
+"32
+[; ;canrx.c: 32: {
 {
 [e :U _main ]
 [f ]
-"34
-[; ;canrx.c: 34: char a=5;
+"33
+[; ;canrx.c: 33: char a=5;
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 5 `i `uc ]
-"35
-[; ;canrx.c: 35: TXSTA=0x24;
+"34
+[; ;canrx.c: 34: TXSTA=0x24;
 [e = _TXSTA -> -> 36 `i `uc ]
-"36
-[; ;canrx.c: 36: RCSTA=0x90;
+"35
+[; ;canrx.c: 35: RCSTA=0x90;
 [e = _RCSTA -> -> 144 `i `uc ]
-"37
-[; ;canrx.c: 37: SPBRG=129;
+"36
+[; ;canrx.c: 36: SPBRG=129;
 [e = _SPBRG -> -> 129 `i `uc ]
-"38
-[; ;canrx.c: 38: TRISB=0x08;
+"37
+[; ;canrx.c: 37: TRISB=0x08;
 [e = _TRISB -> -> 8 `i `uc ]
-"39
-[; ;canrx.c: 39: TRISC=0x80;
+"38
+[; ;canrx.c: 38: TRISC=0x80;
 [e = _TRISC -> -> 128 `i `uc ]
-"40
-[; ;canrx.c: 40: LATB3=0;
+"39
+[; ;canrx.c: 39: LATB3=0;
 [e = _LATB3 -> -> 0 `i `b ]
-"41
-[; ;canrx.c: 41: CANCONbits.REQOP2=1;
+"40
+[; ;canrx.c: 40: CANCONbits.REQOP2=1;
 [e = . . _CANCONbits 0 7 -> -> 1 `i `uc ]
-"42
-[; ;canrx.c: 42: while(CANSTATbits.OPMODE2==0);
+"41
+[; ;canrx.c: 41: while(CANSTATbits.OPMODE2==0);
 [e $U 1105  ]
 [e :U 1106 ]
 [e :U 1105 ]
 [e $ == -> . . _CANSTATbits 0 7 `i -> 0 `i 1106  ]
 [e :U 1107 ]
-"43
-[; ;canrx.c: 43: CANCONbits.ABAT=1;
+"42
+[; ;canrx.c: 42: CANCONbits.ABAT=1;
 [e = . . _CANCONbits 0 4 -> -> 1 `i `uc ]
-"44
-[; ;canrx.c: 44: MDSEL1=0;
+"43
+[; ;canrx.c: 43: MDSEL1=0;
 [e = _MDSEL1 -> -> 0 `i `b ]
-"45
-[; ;canrx.c: 45: MDSEL0=0;
+"44
+[; ;canrx.c: 44: MDSEL0=0;
 [e = _MDSEL0 -> -> 0 `i `b ]
-"47
-[; ;canrx.c: 47: BRGCON1=0x04;
+"46
+[; ;canrx.c: 46: BRGCON1=0x04;
 [e = _BRGCON1 -> -> 4 `i `uc ]
-"48
-[; ;canrx.c: 48: BRGCON2=0xa4;
+"47
+[; ;canrx.c: 47: BRGCON2=0xa4;
 [e = _BRGCON2 -> -> 164 `i `uc ]
-"49
-[; ;canrx.c: 49: BRGCON3=0x04;
+"48
+[; ;canrx.c: 48: BRGCON3=0x04;
 [e = _BRGCON3 -> -> 4 `i `uc ]
-"51
-[; ;canrx.c: 51: LATB3=0;
+"50
+[; ;canrx.c: 50: LATB3=0;
 [e = _LATB3 -> -> 0 `i `b ]
-"53
-[; ;canrx.c: 53: ENDRHI=1;
+"52
+[; ;canrx.c: 52: ENDRHI=1;
 [e = _ENDRHI -> -> 1 `i `b ]
-"54
-[; ;canrx.c: 54: CANCONbits.REQOP2=0;
+"53
+[; ;canrx.c: 53: CANCONbits.REQOP2=0;
 [e = . . _CANCONbits 0 7 -> -> 0 `i `uc ]
-"56
-[; ;canrx.c: 56: while(CANSTATbits.OPMODE2==1);
+"55
+[; ;canrx.c: 55: while(CANSTATbits.OPMODE2==1);
 [e $U 1108  ]
 [e :U 1109 ]
 [e :U 1108 ]
 [e $ == -> . . _CANSTATbits 0 7 `i -> 1 `i 1109  ]
 [e :U 1110 ]
-"58
-[; ;canrx.c: 58: while(1)
+"57
+[; ;canrx.c: 57: while(1)
 [e :U 1112 ]
-"59
-[; ;canrx.c: 59: {
+"58
+[; ;canrx.c: 58: {
 {
-"60
-[; ;canrx.c: 60:     while(RCIF==0);
+"59
+[; ;canrx.c: 59:     while(RCIF==0);
 [e $U 1114  ]
 [e :U 1115 ]
 [e :U 1114 ]
 [e $ == -> _RCIF `i -> 0 `i 1115  ]
 [e :U 1116 ]
 "61
-[; ;canrx.c: 61:     RCREG;
-[e _RCREG ]
+[; ;canrx.c: 61:         txd('I');
+[e ( _txd (1 -> -> 73 `ui `uc ]
 "62
-[; ;canrx.c: 62:         txd('s');
-[e ( _txd (1 -> -> 115 `ui `uc ]
-"63
-[; ;canrx.c: 63:         txd(' ');
+[; ;canrx.c: 62:         txd(' ');
 [e ( _txd (1 -> -> 32 `ui `uc ]
-"64
-[; ;canrx.c: 64:         cantx('a','b');
-[e ( _cantx (2 , -> -> 97 `ui `uc -> -> 98 `ui `uc ]
-"66
-[; ;canrx.c: 66:         delay(100);
+"63
+[; ;canrx.c: 63:         cantx(RCREG);
+[e ( _cantx (1 -> _RCREG `uc ]
+"65
+[; ;canrx.c: 65:         delay(100);
 [e ( _delay (1 -> 100 `i ]
-"67
-[; ;canrx.c: 67:         RCIF=0;
+"66
+[; ;canrx.c: 66:         RCIF=0;
 [e = _RCIF -> -> 0 `i `b ]
-"69
-[; ;canrx.c: 69: }
+"68
+[; ;canrx.c: 68: }
 }
 [e :U 1111 ]
 [e $U 1112  ]
 [e :U 1113 ]
-"70
-[; ;canrx.c: 70: }
+"69
+[; ;canrx.c: 69: }
 [e :UE 1104 ]
 }

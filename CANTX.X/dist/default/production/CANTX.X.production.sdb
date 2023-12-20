@@ -33,8 +33,6 @@
 [v _RXB0CON RXB0CON `VEuc  1 e 1 @3936 ]
 "24274
 [v _RXB0D0 RXB0D0 `VEuc  1 e 1 @3942 ]
-"24336
-[v _RXB0D1 RXB0D1 `VEuc  1 e 1 @3943 ]
 [s S75 . 1 `uc 1 EICODE0 1 0 :1:0 
 `uc 1 EICODE1_ICODE0 1 0 :1:1 
 `uc 1 EICODE2_ICODE1 1 0 :1:2 
@@ -110,5 +108,5 @@
 "9 E:\CANRND\CANTX.X\CANTX.c
 [v _main main `(v  1 e 1 0 ]
 {
-"58
+"52
 } 0

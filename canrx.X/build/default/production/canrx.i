@@ -18017,14 +18017,13 @@ TXREG=a;
 TXIF=0;
 
 }
-void cantx(char a,char b)
+void cantx(char a)
 {
 
 TXB0SIDH=0;
 TXB0SIDL=0xE0;
 TXB0DLC=0x02;
 TXB0D0=a;
-TXB0D1=b;
 TXB0CON=0x08;
 txd('r');
 txd(' ');
@@ -18062,10 +18061,10 @@ while(CANSTATbits.OPMODE2==1);
 while(1)
 {
     while(RCIF==0);
-    RCREG;
-        txd('s');
+
+        txd('I');
         txd(' ');
-        cantx('a','b');
+        cantx(RCREG);
 
         delay(100);
         RCIF=0;

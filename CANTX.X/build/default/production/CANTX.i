@@ -18034,7 +18034,6 @@ BRGCON2=0xa4;
 BRGCON3=0x04;
 ENDRHI=1;
 CANCONbits.REQOP2=0;
-
 while(CANSTATbits.OPMODE2==1);
 
 
@@ -18045,17 +18044,12 @@ while((RXB0CON&0x80) ==0x00);
 TXIF=0;
 while(TXIF==0);
 TXREG=RXB0D0;
-TXIF=0;
-while(TXIF==0);
-TXREG=RXB0D1;
 
 TXIF=0;
 while(TXIF==0);
 TXREG='\n';
 
-TXIF=0;
-while(TXIF==0);
-TXREG='\r';
+
 
 }
 

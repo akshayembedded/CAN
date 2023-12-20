@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.45\pic\dat\20230818022343_en.msgs \
   -cn -h+dist/default/production\CANTX.X.production.sym \
   --cmf=dist/default/production\CANTX.X.production.cmf -z -Q18F4580 \
-  -oC:\Users\aksha\AppData\Local\Temp\xcAsncc.\driver_tmp_3.o \
+  -oC:\Users\aksha\AppData\Local\Temp\xcAsqqs.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/CANTX.X.production.map \
-  --md=C:\Users\aksha\AppData\Local\Temp\xcAsncc.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\aksha\AppData\Local\Temp\xcAsqqs.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=01400h-07F00h -ACONST=01400h-07F00h \
   -ASMALLCONST=01400h-014FFhx107,07F00h-07F00h -AMEDIUMCONST=01400h-07F00h \
   -ACOMRAM=01h-05Fh -AABS1=00h-05FFh -ABIGRAM=01h-05FFh \
@@ -25,7 +25,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\aksha\AppData\Local\Temp\xcAsncc.\driver_tmp_9.o \
+  C:\Users\aksha\AppData\Local\Temp\xcAsqqs.\driver_tmp_9.o \
   dist/default/production\CANTX.X.production.o 
 
 Object code version is 3.11
@@ -35,18 +35,18 @@ Machine type is 18F4580
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\aksha\AppData\Local\Temp\xcAsncc.\driver_tmp_9.o
+C:\Users\aksha\AppData\Local\Temp\xcAsqqs.\driver_tmp_9.o
                 init                                  0        0        4        0       0
 dist/default/production\CANTX.X.production.o
                 smallconst                         1400     1400        2      A00       0
-                text0                              7E38     7E38       C8     3F1C       0
-                cinit                              7E32     7E32        6     3F19       0
+                text0                              7E60     7E60       A0     3F30       0
+                cinit                              7E5A     7E5A        6     3F2D       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 init                                  0        0        4         0
-                text0                              7E38     7E38       C8         0
-                cinit                              7E32     7E32        6         0
+                text0                              7E60     7E60       A0         0
+                cinit                              7E5A     7E5A        6         0
 
         CLASS   CONST          
 
@@ -97,8 +97,8 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 smallconst                     001400  000002  001402       A00       0  SMALLCON
-                cinit                          007E32  000006  007E38      3F19       0  CODE    
-                text0                          007E38  0000C8  007F00      3F1C       0  CODE    
+                cinit                          007E5A  000006  007E60      3F2D       0  CODE    
+                text0                          007E60  0000A0  007F00      3F30       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -112,19 +112,19 @@ UNUSED ADDRESS RANGES
         BANK5            0500-05FF            100
         BIGRAM           0001-05FF            5FF
         BIGSFR           0D00-0FFF            300
-        CODE             1402-7E31           6A30
+        CODE             1402-7E59           6A58
                          7F00-7F00              1
         COMRAM           0001-005F             5F
         CONFIG           300000-30000D              E
-        CONST            1402-7E31           6A30
+        CONST            1402-7E59           6A58
                          7F00-7F00              1
         EEDATA           F00000-F000FF            100
         IDLOC            200000-200007              8
-        MEDIUMCONST      1402-7E31           6A30
+        MEDIUMCONST      1402-7E59           6A58
                          7F00-7F00              1
         RAM              0060-05FF            100
         SFR              0D00-0FFF            100
-        SMALLCONST       1402-7E31            100
+        SMALLCONST       1402-7E59            100
                          7F00-7F00              1
 
                                   Symbol Table
@@ -141,7 +141,6 @@ _MDSEL1                  (abs)        7BBF
 _RCSTA                   (abs)        0FAB
 _RXB0CON                 (abs)        0F60
 _RXB0D0                  (abs)        0F66
-_RXB0D1                  (abs)        0F67
 _SPBRG                   (abs)        0FAF
 _TRISB                   (abs)        0F93
 _TRISC                   (abs)        0F94
@@ -289,18 +288,18 @@ ___stack_hi              stack        0000
 ___stack_lo              stack        0000
 __accesstop              (abs)        0060
 __activetblptr           (abs)        0000
-__end_of__initialization cinit        7E32
+__end_of__initialization cinit        7E5A
 __end_of_main            text0        7F00
-__initialization         cinit        7E32
+__initialization         cinit        7E5A
 __mediumconst            mediumconst  0000
-__pcinit                 cinit        7E32
+__pcinit                 cinit        7E5A
 __pcstackCOMRAM          cstackCOMRAM 0000
 __psmallconst            smallconst   1400
-__ptext0                 text0        7E38
+__ptext0                 text0        7E60
 __ramtop                 ramtop       0600
 __smallconst             smallconst   1400
-_main                    text0        7E38
-end_of_initialization    cinit        7E32
+_main                    text0        7E60
+end_of_initialization    cinit        7E5A
 intlevel0                text         0000
 intlevel1                text         0000
 intlevel2                text         0000
@@ -310,19 +309,19 @@ isa$xinst                (abs)        0000
 stackhi                  (abs)        0000
 stacklo                  (abs)        0000
 start                    init         0000
-start_initialization     cinit        7E32
+start_initialization     cinit        7E5A
 
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 shared
-		__initialization		CODE           	7E32	0000	1
+		__initialization		CODE           	7E5A	0000	1
 
 shared estimated size: 1
 
 CANTX.c
-		_main          		CODE           	7E38	0000	200
+		_main          		CODE           	7E60	0000	160
 
-CANTX.c estimated size: 200
+CANTX.c estimated size: 160
 

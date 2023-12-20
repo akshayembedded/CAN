@@ -86,9 +86,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24274
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4580.h: 24274: extern volatile unsigned char RXB0D0 __attribute__((address(0xF66)));
 [v _RXB0D0 `Vuc ~T0 @X0 0 e@3942 ]
-"24336
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4580.h: 24336: extern volatile unsigned char RXB0D1 __attribute__((address(0xF67)));
-[v _RXB0D1 `Vuc ~T0 @X0 0 e@3943 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4580.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4580.h: 54: __asm("RXF6SIDH equ 0D60h");
 [; <" RXF6SIDH equ 0D60h ;# ">
@@ -1450,41 +1447,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32
 [; ;CANTX.c: 32: CANCONbits.REQOP2=0;
 [e = . . _CANCONbits 0 7 -> -> 0 `i `uc ]
-"34
-[; ;CANTX.c: 34: while(CANSTATbits.OPMODE2==1);
+"33
+[; ;CANTX.c: 33: while(CANSTATbits.OPMODE2==1);
 [e $U 1103  ]
 [e :U 1104 ]
 [e :U 1103 ]
 [e $ == -> . . _CANSTATbits 0 7 `i -> 1 `i 1104  ]
 [e :U 1105 ]
-"37
-[; ;CANTX.c: 37: while(1)
+"36
+[; ;CANTX.c: 36: while(1)
 [e :U 1107 ]
-"38
-[; ;CANTX.c: 38: {
+"37
+[; ;CANTX.c: 37: {
 {
-"39
-[; ;CANTX.c: 39: RXB0CON=0x60;
+"38
+[; ;CANTX.c: 38: RXB0CON=0x60;
 [e = _RXB0CON -> -> 96 `i `uc ]
-"40
-[; ;CANTX.c: 40: while((RXB0CON&0x80) ==0x00);
+"39
+[; ;CANTX.c: 39: while((RXB0CON&0x80) ==0x00);
 [e $U 1109  ]
 [e :U 1110 ]
 [e :U 1109 ]
 [e $ == & -> _RXB0CON `i -> 128 `i -> 0 `i 1110  ]
 [e :U 1111 ]
-"41
-[; ;CANTX.c: 41: TXIF=0;
+"40
+[; ;CANTX.c: 40: TXIF=0;
 [e = _TXIF -> -> 0 `i `b ]
-"42
-[; ;CANTX.c: 42: while(TXIF==0);
+"41
+[; ;CANTX.c: 41: while(TXIF==0);
 [e $U 1112  ]
 [e :U 1113 ]
 [e :U 1112 ]
 [e $ == -> _TXIF `i -> 0 `i 1113  ]
 [e :U 1114 ]
-"43
-[; ;CANTX.c: 43: TXREG=RXB0D0;
+"42
+[; ;CANTX.c: 42: TXREG=RXB0D0;
 [e = _TXREG _RXB0D0 ]
 "44
 [; ;CANTX.c: 44: TXIF=0;
@@ -1497,41 +1494,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ == -> _TXIF `i -> 0 `i 1116  ]
 [e :U 1117 ]
 "46
-[; ;CANTX.c: 46: TXREG=RXB0D1;
-[e = _TXREG _RXB0D1 ]
-"48
-[; ;CANTX.c: 48: TXIF=0;
-[e = _TXIF -> -> 0 `i `b ]
-"49
-[; ;CANTX.c: 49: while(TXIF==0);
-[e $U 1118  ]
-[e :U 1119 ]
-[e :U 1118 ]
-[e $ == -> _TXIF `i -> 0 `i 1119  ]
-[e :U 1120 ]
-"50
-[; ;CANTX.c: 50: TXREG='\n';
+[; ;CANTX.c: 46: TXREG='\n';
 [e = _TXREG -> -> 10 `ui `uc ]
-"52
-[; ;CANTX.c: 52: TXIF=0;
-[e = _TXIF -> -> 0 `i `b ]
-"53
-[; ;CANTX.c: 53: while(TXIF==0);
-[e $U 1121  ]
-[e :U 1122 ]
-[e :U 1121 ]
-[e $ == -> _TXIF `i -> 0 `i 1122  ]
-[e :U 1123 ]
-"54
-[; ;CANTX.c: 54: TXREG='\r';
-[e = _TXREG -> -> 13 `ui `uc ]
-"56
-[; ;CANTX.c: 56: }
+"50
+[; ;CANTX.c: 50: }
 }
 [e :U 1106 ]
 [e $U 1107  ]
 [e :U 1108 ]
-"58
-[; ;CANTX.c: 58: }
+"52
+[; ;CANTX.c: 52: }
 [e :UE 1096 ]
 }
